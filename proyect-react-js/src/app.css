@@ -1,0 +1,54 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .brand-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .categories {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .cart-icon {
+    font-size: 1.2rem;
+    position: relative;
+  }
+  
+  .cart-icon::after {
+    content: '5'; /* Número hardcodeado */
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem;
+    font-size: 0.8rem;
+  }
+
+  .item-list-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-list-container {
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
