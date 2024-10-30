@@ -1,5 +1,6 @@
 /* src/components/NavBar.css */
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -47,5 +48,23 @@
     .nav-links {
       gap: 1rem;
     }
+  }
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .cart-icon {
+    font-size: 1.5rem;
+    margin-right: 0.3rem;
+    color: #333;
+  }
+  
+  .cart-count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
   }
   
