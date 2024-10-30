@@ -1,26 +1,22 @@
+// src/components/NavBar.js
 import React from 'react';
 import CartWidget from './CartWidget';
+import "./NavBar.css";
+
 
 const NavBar = () => {
-    return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="#">Nombre de la Tienda</a>
-            <div className="collapse navbar-collapse">
-                <ul className="navbar-nav mr-auto">
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Categoría 1</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Categoría 2</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#">Categoría 3</a>
-                    </li>
-                </ul>
-                <CartWidget />
-            </div>
-        </nav>
-    );
+  return (
+    <nav className="navbar">
+      <h1 className="brand">Lily accesorios</h1>
+      <div className="nav-links">
+        <a href="#home">Inicio</a>
+        <a href="#categories">Categorías</a>
+        <a href="#about">Nosotros</a>
+        <a href="#contact">Contacto</a>
+      </div>
+      <CartWidget />
+    </nav>
+  );
 };
 
 export default NavBar;
