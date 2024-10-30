@@ -52,3 +52,87 @@
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
+  /* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+/* NavBar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-categories {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-link:hover {
+  background-color: #357ABD;
+}
+
+/* CartWidget */
+.cart-widget {
+  position: relative;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.cart-widget-icon {
+  font-size: 1.5rem;
+}
+
+.cart-notification {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #ff6b6b;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* ItemListContainer */
+.item-list-container {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.greeting {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+}
