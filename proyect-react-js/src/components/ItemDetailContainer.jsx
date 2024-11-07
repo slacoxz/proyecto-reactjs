@@ -1,22 +1,20 @@
-// src/components/ItemDetailContainer.js
+// src/components/ItemDetailContainer.jsx
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-function ItemDetailContainer() {
-  const { id } = useParams(); // Captura el ID del producto
+const ItemDetailContainer = () => {
+    const { id } = useParams(); // Captura el id del producto
 
-  useEffect(() => {
-    // Lógica para cargar detalles del producto en función de `id`
-    console.log("Cargando detalles del producto con ID:", id);
-    // Aquí podrías llamar a tus async-mocks o funciones de API para cargar los detalles del producto
-  }, [id]);
+    useEffect(() => {
+        console.log("Cargando detalles del producto con ID:", id);
+    }, [id]);
 
-  return (
-    <div>
-      <h2>Detalle del Producto {id}</h2>
-      {/* Renderizar los detalles del producto aquí */}
-    </div>
-  );
-}
+    return (
+        <div className="item-detail-container">
+            <h2>Detalle del Producto {id}</h2>
+            {/* Aquí irán los detalles del producto */}
+        </div>
+    );
+};
 
 export default ItemDetailContainer;
