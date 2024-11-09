@@ -1,14 +1,16 @@
-// src/components/Item.js
+// src/components/Item.jsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function Item({ id, name }) {
+const Item = ({ item }) => {
   return (
-    <div>
-      <h3>{name}</h3>
-      <Link to={`/item/${id}`}>Ver detalles</Link>
+    <div className="item-card">
+      <h3>{item.nombre}</h3>
+      <p>Precio: ${item.precio}</p>
+      <button onClick={() => alert(`Agregado ${item.nombre} al carrito!`)}>
+        Agregar al Carrito
+      </button>
     </div>
   );
-}
+};
 
 export default Item;

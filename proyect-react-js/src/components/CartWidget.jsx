@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import { FaShoppingCart } from "react-icons/fa";
 
 const CartWidget = () => {
-    return (
-        <div className="cart-widget">
-            <i className="fas fa-shopping-cart"></i> {/* Usa un ícono de carrito de FontAwesome o de tu preferencia */}
-            <span className="badge badge-pill badge-primary">3</span> {/* Número fijo */}
-        </div>
-    );
+  return (
+    <div>
+      <FaShoppingCart /> <span>3</span> {/* Número de productos en el carrito */}
+    </div>
+  );
 };
 
 export default CartWidget;
