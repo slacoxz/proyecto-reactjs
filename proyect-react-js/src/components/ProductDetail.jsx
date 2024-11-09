@@ -20,7 +20,9 @@ const ProductDetail = ({ item, closeDetails }) => {
       <div className="product-detail-content">
         <button className="close-button" onClick={closeDetails}>X</button>
         <h2>{item.nombre}</h2>
+        <div className="image-container">
         <img src={item.imagen} alt={item.nombre} className="product-image" />
+        </div>
         <p>{item.descripcion}</p>
         <p>Precio: ${item.precio}</p>
         
