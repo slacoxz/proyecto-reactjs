@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
     return (
         <div className="item-detail-container">
             <h2>Detalle del Producto {id}</h2>
-            {/* Aquí irán los detalles del producto */}
+            {}
         </div>
     );
 };

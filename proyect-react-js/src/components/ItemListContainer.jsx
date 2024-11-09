@@ -4,10 +4,31 @@ import { useParams } from 'react-router-dom';
 import Item from './Item';
 
 const productos = [
-  { id: 1, nombre: 'Producto 1', categoria: 'electronica', precio: 100 },
-  { id: 2, nombre: 'Producto 2', categoria: 'ropa', precio: 50 },
-  { id: 3, nombre: 'Producto 3', categoria: 'accesorios', precio: 30 },
-  // Agrega más productos según sea necesario
+  {
+    id: 1,
+    nombre: 'Producto 1',
+    categoria: 'Collares',
+    precio: 100,
+    imagen: 'https://via.placeholder.com/150', 
+    descripcion: 'Este es un producto electrónico de alta calidad.'
+  },
+  {
+    id: 2,
+    nombre: 'Producto 2',
+    categoria: 'Collares',
+    precio: 50,
+    imagen: 'https://via.placeholder.com/150',
+    descripcion: 'Ropa cómoda y a la moda para cualquier ocasión.'
+  },
+  {
+    id: 3,
+    nombre: 'Producto 3',
+    categoria: 'Collares',
+    precio: 30,
+    imagen: 'https://via.placeholder.com/150', 
+    descripcion: 'Accesorios modernos y elegantes para complementar tu estilo.'
+  }
+  
 ];
 
 const ItemListContainer = ({ greeting }) => {

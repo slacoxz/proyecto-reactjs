@@ -1,0 +1,12 @@
+/* src/components/CartWidget.css */
+.cart-preview {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    background:#003366;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 10;
+  }
+  
