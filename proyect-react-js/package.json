@@ -6,10 +6,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "devDependencies": {
-    "vite": "^2.5.4"
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.28.0"
   },
   "scripts": {
     "dev": "vite",
@@ -17,5 +15,8 @@
     "build": "vite build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^5.4.10"
+  }
 }
