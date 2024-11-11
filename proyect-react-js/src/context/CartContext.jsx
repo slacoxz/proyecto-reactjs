@@ -10,25 +10,34 @@ const CartProvider = ({ children }) => {
     setCartItems((prevItems) => {
       const existingProduct = prevItems.find((item) => item.id === product.id);
       if (existingProduct) {
-        // Si el producto ya está en el carrito, actualiza la cantidad
         return prevItems.map((item) =>
           item.id === product.id
             ? { ...item, quantity: item.quantity + product.quantity }
             : item
         );
       } else {
-        // Si el producto no está en el carrito, lo agrega con la cantidad seleccionada
         return [...prevItems, product];
       }
     });
   };
 
+  const removeFromCart = (productId) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== productId));
+  };
+
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
+  const getTotal = () => {
+    return cartItems.reduce((total, item) => total + item.precio * item.quantity, 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, clearCart, getTotal }}>
       {children}
     </CartContext.Provider>
   );
 };
 
-// Exporta CartProvider como una exportación con nombre
 export default CartProvider;

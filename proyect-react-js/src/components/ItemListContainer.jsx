@@ -14,7 +14,7 @@ const productos = [
   },
   {
     id: 2,
-    nombre: 'Set de Collar y Aretes Brillo Eterno',
+    nombre: 'Set Jonia',
     categoria: 'Collares',
     precio: 90000,
     imagen: '../src/imgs.de.productos/Collares/D_NQ_NP_712021-CBT79478823727_092024-O.webp',
@@ -22,7 +22,7 @@ const productos = [
   },
   {
     id: 3,
-    nombre: 'Juego de Lujo en Cristal Plata',
+    nombre: 'Set Condesa',
     categoria: 'Collares',
     precio: 75000,
     imagen: '../src/imgs.de.productos/Collares/81vgqPZTFqL._AC_UY1000_.jpg', 
@@ -47,7 +47,7 @@ const productos = [
   },
   {
     id: 6,
-    nombre: 'Pulsera de Cuentas Ónix y Oro',
+    nombre: 'Pulsera Ónix',
     categoria: 'Pulseras',
     precio: 32000,
     imagen: '../src/imgs.de.productos/Pulseras/7f3afa2d5757d72989a72cb76f4ed7a1.jpg', 
@@ -55,7 +55,7 @@ const productos = [
   },
   {
     id: 7,
-    nombre: 'Pulsera de Perlas y Cristales Rosados',
+    nombre: 'Rouse',
     categoria: 'Pulseras',
     precio: 25000,
     imagen: '../src/imgs.de.productos/Pulseras/copia-31-a930633274990b3a0316393353996491-1024-1024.jpg', 
@@ -63,7 +63,7 @@ const productos = [
   },
   {
     id: 8,
-    nombre: 'Pulsera de Onix con Corona Dorada',
+    nombre: 'Corona Dorada',
     categoria: 'Pulseras',
     precio: 35000,
     imagen: '../src/imgs.de.productos/Pulseras/d0b6f1d31002fe20a9908039c5fd5a6a.jpg', 
@@ -71,7 +71,7 @@ const productos = [
   },
   {
     id: 9,
-    nombre: 'Brazalete Turquesa de Verano',
+    nombre: 'Turquesa',
     categoria: 'Pulseras',
     precio: 20000,
     imagen: '../src/imgs.de.productos/Pulseras/il_570xN.5956967948_gyi5.avif', 
@@ -111,7 +111,7 @@ const productos = [
   },
   {
     id: 14,
-    nombre: 'Aretes Florales con Perla',
+    nombre: 'Florales de Perla',
     categoria: 'Aritos',
     precio: 15000,
     imagen: '../src/imgs.de.productos/Aritos/istockphoto-1289163992-612x612.jpg', 
