@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Item from './Item';
 
-const productos = [
+ export const productos = [
   {
     id: 1,
     nombre: 'Conjunto de Joyas Esplendor de Cristal',

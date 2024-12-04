@@ -1,20 +1,25 @@
 // src/components/ItemDetailContainer.jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import ItemDetail from './ItemDetail';
+import { productos } from './ItemListContainer'; 
+
+
 
 const ItemDetailContainer = () => {
-    const { id } = useParams(); // Captura el id del producto
+  const { id } = useParams();
+  const [item, setItem] = useState(null);
 
-    useEffect(() => {
-        console.log("Cargando detalles del producto con ID:", id);
-    }, [id]);
+  useEffect(() => {
+    const productoEncontrado = productos.find((prod) => prod.id === parseInt(id));
+    setItem(productoEncontrado);
+  }, [id]);
 
-    return (
-        <div className="item-detail-container">
-            <h2>Detalle del Producto {id}</h2>
-            {}
-        </div>
-    );
+  return (
+    <div className="item-detail-container">
+      {item ? <ItemDetail item={item} /> : <p>Cargando...</p>}
+    </div>
+  );
 };
 
 export default ItemDetailContainer;
