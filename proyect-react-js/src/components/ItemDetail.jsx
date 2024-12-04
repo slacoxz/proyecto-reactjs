@@ -1,16 +1,18 @@
 // src/components/ItemDetail.jsx
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
-import ItemCount from './ItemCount';
+import Modal from './Modal'; // Asegúrate de ajustar la ruta correcta
 import './ProductDetail.css';
+import ItemCount from './ItemCount';
 
 const ItemDetail = ({ item }) => {
   const { addToCart } = useContext(CartContext);
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
+  const [showModal, setShowModal] = useState(false); // Estado para controlar el modal
 
-  const handleAddToCart = () => {
-    addToCart({ ...item, quantity });
-    alert(`Añadiste ${quantity} unidad(es) de "${item.nombre}" al carrito.`);
+  const handleAddToCart = (count) => {
+    addToCart({ ...item, quantity }); // Agrega al carrito
+    setShowModal(true); // Muestra el modal
   };
 
   return (
@@ -23,6 +25,18 @@ const ItemDetail = ({ item }) => {
       <button className="add-cart-button" onClick={handleAddToCart}>
         Agregar al Carrito
       </button>
+
+      {/* Modal */}
+      {showModal && (
+        <Modal onClose={() => setShowModal(false)}>
+          <h2>Producto Agregado</h2>
+          <p>
+            Has agregado {quantity} unidad(es) de "<b>{item.nombre}</b>" al
+            carrito.
+          </p>
+          <button onClick={() => setShowModal(false)}>Aceptar</button>
+        </Modal>
+      )}
     </div>
   );
 };

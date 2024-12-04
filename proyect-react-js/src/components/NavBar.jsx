@@ -11,9 +11,8 @@ const NavBar = () => {
         <Link to="/category/Collares">Collares</Link>
         <Link to="/category/Pulseras">Pulseras</Link>
         <Link to="/category/Aritos">Aritos</Link>
-        <Link to="/cart">
-          <CartWidget />
-        </Link>
+        {/* Aquí solo usa CartWidget directamente */}
+        <CartWidget />
       </div>
     </nav>
   );

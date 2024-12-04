@@ -4,20 +4,24 @@ import React, { useState } from 'react';
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
 
-  const increase = () => {
-    if (count < stock) setCount(count + 1);
+  const handleIncrement = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
   };
 
-  const decrease = () => {
-    if (count > initial) setCount(count - 1);
+  const handleDecrement = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
   };
 
   return (
-    <div className="item-count">
-      <button onClick={decrease}>-</button>
+    <div>
+      <button onClick={handleDecrement}>-</button>
       <span>{count}</span>
-      <button onClick={increase}>+</button>
-      <button onClick={() => onAdd(count)}>Añadir</button>
+      <button onClick={handleIncrement}>+</button>
+      <button onClick={() => onAdd(count)}>Agregar al carrito</button>
     </div>
   );
 };

@@ -1,12 +1,14 @@
 // src/pages/CartPage.jsx
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
+import Modal from '../components/Modal'; // Importa el modal
 import './CartPage.css';
 
 const CartPage = () => {
   const { cartItems, clearCart, getTotal } = useContext(CartContext);
   const [buyer, setBuyer] = useState({ name: '', email: '', address: '' });
   const [orderId, setOrderId] = useState(null);
+  const [showModal, setShowModal] = useState(false); // Controla el modal de compra
 
   const handlePurchase = () => {
     const newOrder = {
@@ -16,18 +18,16 @@ const CartPage = () => {
       date: new Date(),
     };
 
-    // Simulación de generación de ID único (luego se reemplazará por Firebase)
     const generatedId = Math.random().toString(36).substring(2, 9);
     setOrderId(generatedId);
     clearCart();
+    setShowModal(true); // Muestra el modal
   };
 
   return (
     <div className="cart-page">
       <h2>Tu Carrito</h2>
-      {orderId ? (
-        <p>¡Gracias por tu compra! Tu ID de pedido es: <b>{orderId}</b></p>
-      ) : cartItems.length === 0 ? (
+      {cartItems.length === 0 ? (
         <p>Tu carrito está vacío.</p>
       ) : (
         <>
@@ -63,6 +63,17 @@ const CartPage = () => {
           </form>
           <button onClick={handlePurchase}>Finalizar Compra</button>
         </>
+      )}
+
+      {/* Modal para la confirmación de compra */}
+      {showModal && orderId && (
+        <Modal onClose={() => setShowModal(false)}>
+          <h2>¡Gracias por tu compra!</h2>
+          <p>
+            Tu ID de pedido es: <b>{orderId}</b>
+          </p>
+          <button onClick={() => setShowModal(false)}>Cerrar</button>
+        </Modal>
       )}
     </div>
   );
