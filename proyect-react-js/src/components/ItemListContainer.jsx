@@ -1,14 +1,16 @@
 // src/components/ItemListContainer.jsx
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom'; // Importa useLocation
 import { collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from '../firebase-config';
-import ProductCard from './ProductCard'; // Componente que renderiza cada producto individual
+import ProductCard from './ProductCard';
+import './ItemListContainer.css';
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]); // Estado para los productos
   const [loading, setLoading] = useState(true); // Estado de carga
   const { id } = useParams(); // Obtiene el ID de la categoría desde la URL
+  const location = useLocation(); // Obtiene la ubicación actual
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -47,7 +49,10 @@ const ItemListContainer = ({ greeting }) => {
 
   return (
     <div>
-      <h1>{greeting}</h1>
+      {/* Condicionalmente renderizamos el título solo si estamos en la ruta "/" (Home) */}
+      {location.pathname === '/' && (
+        <h1 className="welcome-text">Bienvenidos a nuestra tienda</h1>
+      )}
       <div className="product-list">
         {products.length === 0 ? (
           <p>No se encontraron productos en esta categoría.</p>

@@ -1,0 +1,37 @@
+/* src/components/ItemListContainer.css */
+.welcome-text {
+    font-size: 3rem; /* Tamaño grande para un impacto visual */
+    color: #333; /* Color oscuro para contrastar con el fondo */
+    text-align: center; /* Centra el texto */
+    margin-top: 80px; /* Separación desde la parte superior */
+    margin-bottom: 30px; /* Espaciado con los productos */
+    font-weight: bold; /* Resalta el texto */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    animation: slideIn 1.5s ease-out; /* Efecto de deslizamiento */
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px); /* El texto entra desde arriba */
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0); /* El texto se mueve a su posición final */
+      opacity: 1;
+    }
+  }
+  
+  /* Eliminar la línea de arriba */
+  .welcome-text::before {
+    content: none; /* Eliminamos la línea */
+  }
+  
+  .welcome-text {
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradiente de color */
+    color: transparent;
+    background-clip: text; /* Asegura que el fondo se vea solo en el texto */
+    -webkit-background-clip: text; /* Prefijo para Safari */
+    -webkit-text-fill-color: transparent; /* Para que el texto sea transparente y solo el gradiente se vea */
+  }
+  
