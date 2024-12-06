@@ -10,9 +10,6 @@ const Modal = ({ children, onClose }) => {
         onClick={(e) => e.stopPropagation()} 
       >
         {children}
-        <button className="close-modal" onClick={onClose}>
-          Cerrar
-        </button>
       </div>
     </div>
   );

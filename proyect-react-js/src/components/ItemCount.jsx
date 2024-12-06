@@ -1,27 +1,30 @@
-// src/components/ItemCount.jsx
-import React, { useState } from 'react';
+import React from "react";
+import "./ItemCount.css";
 
-const ItemCount = ({ stock, initial, onAdd }) => {
-  const [count, setCount] = useState(initial);
+const ItemCount = ({ stock, initial, onChange }) => {
+  const [quantity, setQuantity] = React.useState(initial);
 
-  const handleIncrement = () => {
-    if (count < stock) {
-      setCount(count + 1);
+  const handleIncrease = () => {
+    if (quantity < stock) {
+      const newQuantity = quantity + 1;
+      setQuantity(newQuantity);
+      onChange(newQuantity); // Llamamos a la función pasada por props
     }
   };
 
-  const handleDecrement = () => {
-    if (count > 1) {
-      setCount(count - 1);
+  const handleDecrease = () => {
+    if (quantity > 1) {
+      const newQuantity = quantity - 1;
+      setQuantity(newQuantity);
+      onChange(newQuantity); // Llamamos a la función pasada por props
     }
   };
 
   return (
-    <div>
-      <button onClick={handleDecrement}>-</button>
-      <span>{count}</span>
-      <button onClick={handleIncrement}>+</button>
-      <button onClick={() => onAdd(count)}>Agregar al carrito</button>
+    <div className="item-count">
+      <button onClick={handleDecrease} className="count-button">-</button>
+      <span className="count-display">{quantity}</span>
+      <button onClick={handleIncrease} className="count-button">+</button>
     </div>
   );
 };
