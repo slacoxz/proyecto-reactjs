@@ -51,8 +51,8 @@ export const CartProvider = ({ children }) => {
         cartItems,
         addToCart,
         removeFromCart,
-        clearCart, // Asegúrate de que `clearCart` esté aquí
-        getTotal,  // Asegúrate de que `getTotal` esté aquí
+        clearCart, 
+        getTotal,  
       }}
     >
       {children}

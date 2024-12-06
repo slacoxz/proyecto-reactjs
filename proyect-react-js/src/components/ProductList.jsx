@@ -25,9 +25,9 @@ const ProductList = () => {
           <li key={product.id}>
             <h2>{product.title}</h2>
             <img src={product.image} alt={product.title} className="product-image" /> {/* Aquí usamos 'product' correctamente */}
-            <p>{product.description}</p> {/* Corregido: uso de 'description' en vez de 'Description' */}
-            <p>Precio: ${product.price}</p> {/* Corregido: uso de 'price' en vez de 'item.price' */}
-            <p>Stock: {product.stock}</p> {/* Corregido: uso de 'stock' en vez de 'product.Stock' */}
+            <p>{product.description}</p> 
+            <p>Precio: ${product.price}</p> 
+            <p>Stock: {product.stock}</p>
           </li>
         ))}
       </ul>

@@ -4,7 +4,7 @@ import { collection, addDoc } from 'firebase/firestore';
 // Función para guardar un pedido
 export const saveOrder = async (order) => {
   try {
-    const orderCollection = collection(db, 'Productos'); // Crea un documento en la colección 'orders'
+    const orderCollection = collection(db, 'Orders'); // Guarda los datos de la compra en otra coleccion
     const docRef = await addDoc(orderCollection, order);
     return docRef.id; // Retorna el ID del pedido guardado
   } catch (e) {
